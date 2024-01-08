@@ -94,13 +94,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: "TTS-Server_${{ env.product }}_${{ env.ver_name }}"
-          path: ${{env.outputs_dir}}/apk/${{ env.product }}/release/*${{ env.ver_name }}.apk
+#          path: ${{env.outputs_dir}}/apk/${{ env.product }}/release/*${{ env.ver_name }}.apk
 
-
-      - name: Upload APK to release folder
-        uses: actions/upload-artifact@v3
-        with:
-          name: "TTS-Server_${{ env.product }}_${{ env.ver_name }}"
           path: app/build/outputs/apk/release/*.apk
 ​
 
