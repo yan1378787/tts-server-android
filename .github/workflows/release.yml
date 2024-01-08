@@ -97,6 +97,13 @@ jobs:
           path: ${{env.outputs_dir}}/apk/${{ env.product }}/release/*${{ env.ver_name }}.apk
 
 
+      - name: Upload APK to release folder
+        uses: actions/upload-artifact@v3
+        with:
+          name: apk
+          path: app/build/outputs/apk/release/*.apk
+​
+
       - uses: softprops/action-gh-release@v0.1.15
         with:
           name: ${{ env.ver_name }}
